@@ -4,6 +4,7 @@ body {
     width: 100%;
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,9 +12,29 @@ body {
     flex-direction: column;
 }
 
-#banner .banner-image {
-    width: 100vw;
-    max-height: 30vh;
+nav, footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2 {
+    font-family:'Raleway', sans-serif;;
+}
+
+h3 {
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+p, span, ol, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero {
+    min-height: 25vh;
+    width: auto;
+    background: url(../assets/imageedit_4_3159211445.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Add a black background color to the top navigation */
@@ -96,16 +117,115 @@ main {
     flex: 1 0 auto;
 }
 
+.main {
+    display: grid;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax {
+    min-height: 500px;
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-container {
+    display: grid;
+    margin: 0;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    background: #373737;
+    color: #ffffff;
+}
+
+.middle {
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: -40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid-container a {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.grid-container a:hover {
+    text-decoration: none;
+}
+
+.grid-container a:hover .album-img {
+    opacity: 0.3;
+}
+
+.grid-container a:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: #ffffff;
+    padding: 16px 32px;
+}
+
+
+.album-img {
+    height: auto;
+    width: 100%;
+}
+
+.album-tracklist {
+    margin: 0 auto;
+}
+
 #carousel-main {
-    max-height: 60vh;
-    max-width: 90vw;
-    width: auto;
-    margin: 5% auto;
+    height: 40vh;
+    width: 80vw;
 }
 
 #carousel-main img {
-    height: 60vh;
-    width: auto;
+    height: 40vh;
+    width: 80vw;
+}
+
+@media screen and (min-width: 1120px) {
+    #carousel-main {
+        height: 70vh;
+        margin: 10vh auto;
+    }
+    
+    #carousel-main img {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 20px auto 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #carousel-main {
+        height: 30vh;
+        width: 80vw;
+        grid-column-start: 2;
+    }
+
+    #carousel-main img {
+        height: 30vh;
+        width: 80vw;
+    }
 }
 
 #footer {
