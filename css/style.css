@@ -31,8 +31,9 @@ p, span, ol, li {
 .hero {
     min-height: 25vh;
     width: auto;
-    background: url(../assets/imageedit_4_3159211445.png);
-    background-size: cover;
+    background: url(../assets/thumbnail_Untitled-Artwork.png);
+    background-color: black;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -115,6 +116,7 @@ p, span, ol, li {
 
 main {
     flex: 1 0 auto;
+    background: black;
 }
 
 .main {
@@ -198,12 +200,14 @@ main {
 
 @media screen and (min-width: 1120px) {
     #carousel-main {
-        height: 70vh;
-        margin: 10vh auto;
+        height: 45vh;
+        margin: 5vh auto;
+        width: 60vw;
     }
     
     #carousel-main img {
-        height: 70vh;
+        height: 45vh;
+        width: 60vw;
     }
 }
 
