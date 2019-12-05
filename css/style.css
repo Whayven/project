@@ -12,19 +12,25 @@ body {
     flex-direction: column;
 }
 
-nav, footer {
+nav,
+footer {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2 {
-    font-family:'Raleway', sans-serif;;
+h1,
+h2 {
+    font-family: 'Raleway', sans-serif;
+    ;
 }
 
 h3 {
     font-family: 'Covered By Your Grace', cursive;
 }
 
-p, span, ol, li {
+p,
+span,
+ol,
+li {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -47,7 +53,12 @@ p, span, ol, li {
 }
 
 /* Style the links inside the navigation bar */
+@font-face {
+    font-family: LeonSans-Regular;
+    src: url("../fonts/LeonSans-Regular.otf");
+}
 .topnav a {
+    font-family: 'LeonSans-Regular';
     display: block;
     color: #f2f2f2;
     text-align: center;
@@ -60,6 +71,7 @@ p, span, ol, li {
 .topnav a:hover {
     background-color: #ddd;
     color: black;
+    text-decoration: none;
 }
 
 /* Add an active class to highlight the current page */
@@ -125,6 +137,38 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.showcase {
+    background: url(../assets/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+.subscribe {
+    display: grid;
+    align-items: center;
+    backdrop-filter: blur(2px) opacity(60%);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-form form button {
+    background-color: #ddd;
+    border: none;
+    border-radius: 2px;
+}
+
+.sub-form form button:hover {
+    background-color: #DC461D;
+    color: #fff;
+    border: none;
+}
+
+
+
 
 .parallax {
     min-height: 350px;
@@ -204,7 +248,7 @@ main {
         margin: 5vh auto;
         width: 60vw;
     }
-    
+
     #carousel-main img {
         height: 45vh;
         width: 60vw;
@@ -247,4 +291,24 @@ main {
 .footer-links {
     display: flex;
     justify-content: space-evenly;
+}
+
+.footer-links * {
+    transition: all .2s ease-in-out;
+}
+
+.footer-links *:hover {
+    transform: scale(1.1);
+}
+
+.fa-bandcamp {
+    color: white;
+}
+
+.fa-spotify {
+    color: greenyellow;
+}
+
+.fa-apple {
+    color: white;
 }
